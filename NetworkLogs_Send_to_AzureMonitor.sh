@@ -4,7 +4,7 @@ start_time=$(date +%s)
 IFS='_' read -r -a PARTS_ScriptFileName <<< "$0"
 echo "********Script $0 Started********"
 #variables
-input_file_customconfig="/home/lsasz49yw/prodscripts/customconfig/computernames/computername${PARTS_ScriptFileName[1]}.json"
+input_file_customconfig="/home/prakash/prodscripts/customconfig/computernames/computername${PARTS_ScriptFileName[1]}.json"
 echo $input_file_customconfig
 path_collectd="/network/var/lib/collectd"
 currentyear=$(date +%Y)
@@ -12,9 +12,9 @@ TODAYDATE=$(date +"%Y-%m-%d")
 #LOG_FILENAME="NetworkLogCustomOutput_$TODAYDATE.log"
 LOG_FILENAME="NetworkLogCustomOutput_${PARTS_ScriptFileName[1]}.txt"
 #Custom_Log_File_Path="/home/lsasz49yw/prodscripts//AzureMonitor/$LOG_FILENAME"
-TempRunningCustom_Log_File_Path="/home/lsasz49yw/prodscripts/TempLogPath/$LOG_FILENAME"
+TempRunningCustom_Log_File_Path="/home/prakash/prodscripts/TempLogPath/$LOG_FILENAME"
 #Configuration file path
-CONFIG_FILE="/home/lsasz49yw/prodscripts/customconfig/logfolderdetails/log_${PARTS_ScriptFileName[1]}_config.txt"
+CONFIG_FILE="/home/prakash/prodscripts/customconfig/logfolderdetails/log_${PARTS_ScriptFileName[1]}_config.txt"
 #Load configuration file
 source "$CONFIG_FILE"
 echo $AzureMonitorFOLDER1
